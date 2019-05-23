@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ASIRequestHelper.h"
 
 @interface ViewController ()
 
@@ -16,6 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[ASIRequestHelper shareInstance] post:@"http://duobaosdk-3.com" success:^(id  _Nonnull result) {
+        
+    } failure:^(id  _Nonnull error) {
+        
+    }];
     // Do any additional setup after loading the view.
 }
 
